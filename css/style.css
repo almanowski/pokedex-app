@@ -1,1 +1,89 @@
+/*
+prim-color: #363b81
+bg-cards-color: #f5f5f5
+bg-color: #fff
+open color: #ff1f1f
+*/
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 1.9em;
+  color: #363b81;
+}
+
+h2 {
+  font-size: 1.4em;
+  color: #363b81;
+  margin: 0;
+}
+
+/*-------------------------header------------------------------*/
+
+.pokemonlist__h1 {
+  margin: 70px 0;
+  text-align: center;
+}
+
+/*-------------------pokemonlist----------------------------*/
+
+.pokemonlist {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  justify-items: center;
+  margin: 0 20px;
+}
+
+.pokemonlist__item {
+  padding: 20px 15px 30px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 7px 8px 9px 0px rgba(54,59,129,0.63);
+  width: 280px;
+}
+
+/*--------------------media----------------------------*/
+
+@media all and (max-width: 750px) {
+  .pokemonlist__h1 {
+    margin: 50px 0;
+  }
+
+  .pokemonlist {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .pokemonlist__h1 {
+    margin: 40px 0 30px 0;
+  }
+  .pokemonlist {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .pokemonlist__item {
+    min-width: none;
+    width: 240px;
+  }
+}
