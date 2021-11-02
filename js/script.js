@@ -23,19 +23,22 @@ for (let i = 0; i < pokemonList.length; i++) {
         //div, h2, p for css
         document.write('<div class="pokemonlist__item">' +
             '<h2>' + pokemonList[i].name + '</h2>' +
-            '<p>' + 'Height: ' + pokemonList[i].height +
-            ' - Wow, that\'s big!! ' + '</p>' +
-            '<p>' + 'Type: ' + pokemonList[i].types + '</p>' + '</div>')
+            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height +
+            ' - Wow, that\'s big!! ' + '</li>' +
+            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
+            '</ul>' + '</div>')
     } else if (pokemonList[i].height > 0.5 && pokemonList[i].height < 1.0) {
         document.write('<div class="pokemonlist__item">' +
             '<h2>' + pokemonList[i].name + '</h2>' +
-            '<p>' + 'Height: ' + pokemonList[i].height + '</p>' +
-            '<p>' + 'Type: ' + pokemonList[i].types + '</p>' + '</div>')
+            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height + '</li>' +
+            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
+            '</ul>' + '</div>')
     } else {
         document.write('<div class="pokemonlist__item">' +
             '<h2>' + pokemonList[i].name + '</h2>' +
-            '<p>' + 'Height: ' + pokemonList[i].height +
-            ' - Smoll baby! ' + '</p>' + '<p>' + 'Type: ' +
-            pokemonList[i].types + '</p>' + '</div>')
+            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height +
+            ' - Smoll baby! ' + '</li>' +
+            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
+            '</ul>' + '</div>')
     }
 }
