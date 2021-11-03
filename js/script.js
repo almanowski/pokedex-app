@@ -1,3 +1,5 @@
+//Wrapped pokemonList in an IIFE to avoid accidentally accessing the global state
+const pokemonRepository = (function () {
 const pokemonList = [{
         name: 'Bulbasaur',
         height: 0.7,
@@ -15,12 +17,30 @@ const pokemonList = [{
     }
 ];
 
+//Access pokemonList
+function getAll() {
+  return pokemonList;
+}
+
+//Add pokemon to the pokemonList
+function add(pokemon) {
+  pokemonList.push(pokemon);
+}
+
+//Access the above functions outside of pokemonRepository
+return {
+  add: add,
+  getAll: getAll(),
+};
+})();
+
+
 
 //change from for to forEach() Loop - Exercise 1.5
-pokemonList.forEach(function(pokemon){
+pokemonRepository.getAll.forEach(function(pokemon){
   //if-else - adding comments about pokemon height
       if (pokemon.height > 1.0) {
-          //div, h2, p for css
+          //div, h2, ul, li for css
           document.write('<div class="pokemonlist__item">' +
               '<h2>' + pokemon.name + '</h2>' +
               '<ul>' + '<li>' + 'Height: ' + pokemon.height +
