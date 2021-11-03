@@ -16,29 +16,29 @@ const pokemonList = [{
 ];
 
 
-//Loop for pokemonlist array
-for (let i = 0; i < pokemonList.length; i++) {
-    //if-else - adding comments about pokemon height
-    if (pokemonList[i].height > 1.0) {
-        //div, h2, p for css
-        document.write('<div class="pokemonlist__item">' +
-            '<h2>' + pokemonList[i].name + '</h2>' +
-            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height +
-            ' - Wow, that\'s big!! ' + '</li>' +
-            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
-            '</ul>' + '</div>')
-    } else if (pokemonList[i].height > 0.5 && pokemonList[i].height < 1.0) {
-        document.write('<div class="pokemonlist__item">' +
-            '<h2>' + pokemonList[i].name + '</h2>' +
-            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height + '</li>' +
-            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
-            '</ul>' + '</div>')
-    } else {
-        document.write('<div class="pokemonlist__item">' +
-            '<h2>' + pokemonList[i].name + '</h2>' +
-            '<ul>' + '<li>' + 'Height: ' + pokemonList[i].height +
-            ' - Smoll baby! ' + '</li>' +
-            '<li>' + 'Type: ' + pokemonList[i].types + '</li>' +
-            '</ul>' + '</div>')
-    }
-}
+//change from for to forEach() Loop - Exercise 1.5
+pokemonList.forEach(function(pokemon){
+  //if-else - adding comments about pokemon height
+      if (pokemon.height > 1.0) {
+          //div, h2, p for css
+          document.write('<div class="pokemonlist__item">' +
+              '<h2>' + pokemon.name + '</h2>' +
+              '<ul>' + '<li>' + 'Height: ' + pokemon.height +
+              ' - Wow, that\'s big!! ' + '</li>' +
+              '<li>' + 'Type: ' + pokemon.types + '</li>' +
+              '</ul>' + '</div>')
+      } else if (pokemon.height > 0.5 && pokemon.height < 1.0) {
+          document.write('<div class="pokemonlist__item">' +
+              '<h2>' + pokemon.name + '</h2>' +
+              '<ul>' + '<li>' + 'Height: ' + pokemon.height + '</li>' +
+              '<li>' + 'Type: ' + pokemon.types + '</li>' +
+              '</ul>' + '</div>')
+      } else {
+          document.write('<div class="pokemonlist__item">' +
+              '<h2>' + pokemon.name + '</h2>' +
+              '<ul>' + '<li>' + 'Height: ' + pokemon.height +
+              ' - Smoll baby! ' + '</li>' +
+              '<li>' + 'Type: ' + pokemon.types + '</li>' +
+              '</ul>' + '</div>')
+      }
+});
