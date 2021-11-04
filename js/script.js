@@ -1,38 +1,38 @@
-//Wrapped pokemonList in an IIFE to avoid accidentally accessing the global state
+//Wrapped pList in IIFE to avoid accidentally accessing the global state
 const pokemonRepository = (function () {
-const pokemonList = [{
-        name: 'Bulbasaur',
-        height: 0.7,
-        types: ['grass', 'poison']
-    },
-    {
-        name: 'Butterfree',
-        height: 1.1,
-        types: ['bug', 'flying']
-    },
-    {
-        name: 'Eevee',
-        height: 0.3,
-        types: ['normal']
+    const pokemonList = [{
+            name: 'Bulbasaur',
+            height: 0.7,
+            types: ['grass', 'poison']
+        },
+        {
+            name: 'Butterfree',
+            height: 1.1,
+            types: ['bug', 'flying']
+        },
+        {
+            name: 'Eevee',
+            height: 0.3,
+            types: ['normal']
+        }
+    ];
+
+    //Access pokemonList
+    function getAll() {
+        return pokemonList;
     }
-];
 
-//Access pokemonList
-function getAll() {
-  return pokemonList;
-}
+    //Add pokemon to the pokemonList
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
 
-//Add pokemon to the pokemonList
-function add(pokemon) {
-  pokemonList.push(pokemon);
-}
-
-//Access the above functions outside of pokemonRepository
-return {
-  add: add,
-  getAll: getAll(),
-};
-})();
+    //Access the above functions outside of pokemonRepository
+    return {
+        add: add,
+        getAll: getAll
+    };
+}());
 
 
 //Add new Pokemon
