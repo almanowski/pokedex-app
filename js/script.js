@@ -36,29 +36,23 @@ return {
 
 
 
-//change from for to forEach() Loop - Exercise 1.5
-pokemonRepository.getAll.forEach(function(pokemon){
-  //if-else - adding comments about pokemon height
-      if (pokemon.height > 1.0) {
-          //div, h2, ul, li for css
-          document.write('<div class="pokemonlist__item">' +
-              '<h2>' + pokemon.name + '</h2>' +
-              '<ul>' + '<li>' + 'Height: ' + pokemon.height +
-              ' - Wow, that\'s big!! ' + '</li>' +
-              '<li>' + 'Type: ' + pokemon.types + '</li>' +
-              '</ul>' + '</div>')
-      } else if (pokemon.height > 0.5 && pokemon.height < 1.0) {
-          document.write('<div class="pokemonlist__item">' +
-              '<h2>' + pokemon.name + '</h2>' +
-              '<ul>' + '<li>' + 'Height: ' + pokemon.height + '</li>' +
-              '<li>' + 'Type: ' + pokemon.types + '</li>' +
-              '</ul>' + '</div>')
-      } else {
-          document.write('<div class="pokemonlist__item">' +
-              '<h2>' + pokemon.name + '</h2>' +
-              '<ul>' + '<li>' + 'Height: ' + pokemon.height +
-              ' - Smoll baby! ' + '</li>' +
-              '<li>' + 'Type: ' + pokemon.types + '</li>' +
-              '</ul>' + '</div>')
-      }
+//Change from for to forEach() Loop - Exercise 1.5
+pokemonRepository.getAll().forEach(function(pokemon) {
+    const pName = '<h2>' + pokemon.name + '</h2>';
+    const pHeight = 'Height: ' + pokemon.height;
+    const pHeightAdd = ' - Wow, that\'s big!!';
+    const pType = 'Type: ' + pokemon.types;
+
+    //if-else - adding comments about pokemon height
+    if (pokemon.height > 1.0) {
+        document.getElementById("pokemonlist").innerHTML +=
+            '<li class="pokemonlist__item">' +
+            pName + pHeight + pHeightAdd + '<br>' + pType +
+            '</li>';
+    } else {
+        document.getElementById("pokemonlist").innerHTML +=
+            '<li class="pokemonlist__item">' +
+            pName + pHeight + '<br>' + pType +
+            '</li>';
+    }
 });
