@@ -35,6 +35,13 @@ return {
 })();
 
 
+//Add new Pokemon
+pokemonRepository.add({
+    name: 'Pikachu',
+    height: 0.4,
+    types: ['electric']
+});
+
 
 //Change from for to forEach() Loop - Exercise 1.5
 pokemonRepository.getAll().forEach(function(pokemon) {
