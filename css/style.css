@@ -45,7 +45,7 @@ ul {
 
 /*-------------------pokemonlist----------------------------*/
 
-#pokemonlist {
+.pokemonlist {
   clear: both;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,7 +71,7 @@ ul {
     margin: 50px 0;
   }
 
-  #pokemonlist {
+  .pokemonlist {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -80,8 +80,7 @@ ul {
   .pokemonlist__h1 {
     margin: 40px 0 30px 0;
   }
-  
-  #pokemonlist {
+  .pokemonlist {
     grid-template-columns: 1fr;
     margin: 0;
   }
