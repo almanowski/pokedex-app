@@ -27,10 +27,31 @@ const pokemonRepository = (function () {
         pokemonList.push(pokemon);
     }
 
+    //Adding Buttons/Listitems for HTML <ul> - Exercise 1.6
+    function addListPokemon(pokemon) {
+        const list = document.querySelector('.pokemonlist');
+        const listPokemon = document.createElement('li');
+        const button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokemonlist__item');
+        listPokemon.appendChild(button);
+        list.appendChild(listPokemon);
+        //Show Pokemondtails on click
+        button.addEventListener('click', function() {
+            showDetails(pokemon);
+        });
+    }
+
+    //Show Pokemon attributes in console
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
     //Access the above functions outside of pokemonRepository
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListPokemon: addListPokemon
     };
 }());
 
@@ -44,22 +65,7 @@ pokemonRepository.add({
 
 
 //Change from for to forEach() Loop - Exercise 1.5
-pokemonRepository.getAll().forEach(function(pokemon) {
-    const pName = '<h2>' + pokemon.name + '</h2>';
-    const pHeight = 'Height: ' + pokemon.height;
-    const pHeightAdd = ' - Wow, that\'s big!!';
-    const pType = 'Type: ' + pokemon.types;
-
-    //if-else - adding comments about pokemon height
-    if (pokemon.height > 1.0) {
-        document.getElementById("pokemonlist").innerHTML +=
-            '<li class="pokemonlist__item">' +
-            pName + pHeight + pHeightAdd + '<br>' + pType +
-            '</li>';
-    } else {
-        document.getElementById("pokemonlist").innerHTML +=
-            '<li class="pokemonlist__item">' +
-            pName + pHeight + '<br>' + pType +
-            '</li>';
-    }
+pokemonRepository.getAll().forEach(function (pokemon) {
+    //Displays addListPokemon - Exercise 1.6
+    pokemonRepository.addListPokemon(pokemon);
 });
