@@ -36,6 +36,10 @@ ul {
   list-style: none;
 }
 
+button {
+  border-style: none;
+}
+
 /*-------------------------header------------------------------*/
 
 .pokemonlist__h1 {
@@ -58,6 +62,10 @@ ul {
 .pokemonlist__item {
   padding: 20px 15px 30px;
   background-color: #f5f5f5;
+  font-family: verdana, sans-serif;
+  font-size: 1.4em;
+  color: #363b81;
+  margin: 0;
   border-radius: 10px;
   box-shadow: 7px 8px 9px 0px rgba(54,59,129,0.63);
   width: 280px;
