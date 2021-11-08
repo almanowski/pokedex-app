@@ -1,21 +1,6 @@
 //Wrapped pList in IIFE to avoid accidentally accessing the global state
 const pokemonRepository = (function () {
-    const pokemonList = [{
-            name: 'Bulbasaur',
-            height: 0.7,
-            types: ['grass', 'poison']
-        },
-        {
-            name: 'Butterfree',
-            height: 1.1,
-            types: ['bug', 'flying']
-        },
-        {
-            name: 'Eevee',
-            height: 0.3,
-            types: ['normal']
-        }
-    ];
+    const pokemonList = [];
 
     //Access pokemonList
     function getAll() {
@@ -55,13 +40,6 @@ const pokemonRepository = (function () {
     };
 }());
 
-
-//Add new Pokemon
-pokemonRepository.add({
-    name: 'Pikachu',
-    height: 0.4,
-    types: ['electric']
-});
 
 
 //Change from for to forEach() Loop - Exercise 1.5
