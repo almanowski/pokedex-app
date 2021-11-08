@@ -8,14 +8,28 @@
   </head>
   <body>
     <header>
+      <nav role="menu">
+        <ul role="menubar" class="navigation-list header__nav">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="#" role="menuitem" class="navigation-list__item">About</a>
+          </li>
+        </ul>
+      </nav>
+      <img src="img/pokeball_icon.svg" alt="Pokeball icon" class="header__icon">
     </header>
     <main>
       <h1 class="pokemonlist__h1">Pokédex</h1>
-      <ul class="pokemonlist">
+      <ul class="pokemonlist" role="list">
       </ul>
     </main>
     <footer>
     </footer>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch.umd.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tota11y.min.js"></script>
   </body>
 </html>
