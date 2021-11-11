@@ -111,18 +111,12 @@ const pokemonRepository = (function () {
         modal.appendChild(contentElementH);
         modal.appendChild(contentElementW);
 
-        const contentElementSpan = document.createElement('p');
-        contentElementSpan.innerText = ('Abilities: ');
-        contentElementSpan.classList.add('spanAbilities');
-        modal.appendChild(contentElementSpan);
+        //add abilites with comma
+        const contentElementsA = document.createElement('p');
+        contentElementsA.innerText = ('Abilities: ') +
+        pokemon.abilities.map((ability) => ability.ability.name).join(', ')
 
-        pokemon.abilities.forEach(pokemon => {
-            //add paragraphs to display abilities of pokemon
-            const contentElementsA = document.createElement('p');
-            contentElementsA.innerText = pokemon.ability.name;
-            contentElementsA.classList.add('ability');
-            modal.appendChild(contentElementsA);
-        })
+        modal.appendChild(contentElementsA);
 
         modalContainer.appendChild(modal);
 
