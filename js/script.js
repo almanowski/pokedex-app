@@ -109,6 +109,20 @@ const pokemonRepository = (function () {
         modalBody.append(pokemonAbilities);
     }
 
+    let pokemonSearchBar = document.querySelector('#searchbar');
+
+    pokemonSearchBar.addEventListener('input', function() {
+      let pokemonItem = document.querySelectorAll('li');
+      let filter = pokemonSearchBar.value.toUpperCase();
+
+      pokemonItem.forEach(function(pokemon) {
+        if (pokemon.innerText.toUpperCase().indexOf(filter) < 0) {
+          pokemon.style.display = 'none';
+        } else {
+          pokemon.style.display = '';
+        }
+      });
+    });
 
     //Access the above functions outside of pokemonRepository
     return {
