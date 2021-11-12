@@ -20,7 +20,9 @@ const pokemonRepository = (function () {
         const listPokemon = document.createElement('li');
         const button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pokemonlist__item');
+        button.classList.add('pokemonlist__item', 'row', 'btn', 'btn-primary', 'list-group-item', 'list-group-item-action');
+        button.setAttribute('data-toggle', 'modal');
+        button.setAttribute('data-target', '#exampleModal');
         listPokemon.appendChild(button);
         list.appendChild(listPokemon);
         //Show Pokemondtails on click
@@ -106,7 +108,7 @@ const pokemonRepository = (function () {
         pokemon.abilities.map((ability) => ability.ability.name).join(', ')
 
     }
-    
+
 
     //Access the above functions outside of pokemonRepository
     return {
