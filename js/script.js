@@ -20,7 +20,7 @@ const pokemonRepository = (function () {
         const listPokemon = document.createElement('li');
         const button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pokemonlist__item', 'row', 'btn', 'btn-primary', 'list-group-item', 'list-group-item-action');
+        button.classList.add('pokemonlist__item', 'list-group-item','list-group-item-action');
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#exampleModal');
         listPokemon.appendChild(button);
@@ -77,7 +77,6 @@ const pokemonRepository = (function () {
         const modalBody = document.querySelector('.modal-body');
         const modalTitle = document.querySelector('.modal-title');
         //add map/join for display purpose
-        const mapType = pokemon.types.map((type) => type.type.name).join(' ');
         const mapAblities = pokemon.abilities.map((ability) => ability.ability.name).join(', ');
 
         modalBody.innerHTML = '';
@@ -89,21 +88,26 @@ const pokemonRepository = (function () {
         const pokemonImg = document.createElement('img');
         pokemonImg.src = pokemon.imageURL;
 
-        const pokemonTypes = document.createElement('p');
-        pokemonTypes.innerHTML = mapType;
-
         const pokemonHeight = document.createElement('p');
-        pokemonHeight.innerHTML = ('Height: ') + pokemon.height + ('cm');
+        pokemonHeight.innerText = ('Height: ') + pokemon.height + ('0cm');
 
         const pokemonWeight = document.createElement('p');
-        pokemonWeight.innerHTML = ('Weight: ') + pokemon.weight + ('00g');
+        pokemonWeight.innerText = ('Weight: ') + pokemon.weight + ('00g');
 
         const pokemonAbilities = document.createElement('p');
-        pokemonAbilities.innerHTML = ('Abilities: ') + mapAblities;
+        pokemonAbilities.innerText = ('Abilities: ') + mapAblities;
 
         modalTitle.append(pokemonName);
         modalBody.append(pokemonImg);
-        modalBody.append(pokemonTypes);
+
+        pokemon.types.forEach(pokemon => {
+            //add paragraphs to display types of pokemon
+            const pokemonType = document.createElement('p');
+            pokemonType.innerText = pokemon.type.name;
+            pokemonType.classList.add('type');
+            modalBody.append(pokemonType);
+        });
+
         modalBody.append(pokemonHeight);
         modalBody.append(pokemonWeight);
         modalBody.append(pokemonAbilities);
