@@ -29,11 +29,28 @@
         </div>
       </nav>
     </header>
-    <main>
-      <h1 class="pokemonlist__h1">Pokédex</h1>
-      <ul class="pokemonlist" role="list">
-      </ul>
-      <div id='modal-container'></div>
+    <main class="container">
+      <div class="row">
+        <h1 class="pokemonlist__h1 col text-center">Pokédex</h1>
+      </div>
+        <ul class="pokemonlist list-group list-unstyled" role="list">
+        </ul>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+        </div>
+      </div>
+      </div>
     </main>
     <footer>
       <div class="footer-link">
