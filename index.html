@@ -4,22 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="css/style.css" type="text/css">-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Pokédex App</title>
   </head>
   <body>
     <header>
-      <nav role="menu">
-        <ul role="menubar" class="navigation-list header__nav">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+      <nav role="menu" class="navbar navbar-expand-md fixed-top navbar-dark">
+        <img src="img/pokeball_icon.svg" class="header__icon" alt="Pokeball icon">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label:"Toggle navigation">
+          <img src="img/burger_icon.svg">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul role="menubar" class="navbar-nav mr-auto">
+          <li role="presentation" class="nav-item active">
+            <a href="index.html" role="menuitem" class="nav-link active">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li role="presentation">
-            <a href="#" role="menuitem" class="navigation-list__item">About</a>
+          <li role="presentation" class="nav-item">
+            <a href="#" role="menuitem" class="nav-link">About</a>
           </li>
         </ul>
+        </div>
       </nav>
-      <img src="img/pokeball_icon.svg" alt="Pokeball icon" class="header__icon">
     </header>
     <main>
       <h1 class="pokemonlist__h1">Pokédex</h1>
