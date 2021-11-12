@@ -73,40 +73,40 @@ const pokemonRepository = (function () {
 
     //Add modalContainer
     function showModal(pokemon) {
-        modalContainer.innerHTML = '';
+        //bootstrap modal - Exercise 1.9
+        const modalBody = document.querySelector('.modal-body');
+        const modalTitle = document.querySelector('.modal-title');
+        //add map/join for display purpose
+        const mapType = pokemon.types.map((type) => type.type.name).join(' ');
+        const mapAblities = pokemon.abilities.map((ability) => ability.ability.name).join(', ');
 
-        const titleElement = document.createElement('h1');
-        titleElement.innerText = pokemon.name;
+        modalBody.innerHTML = '';
+        modalTitle.innerHTML = '';
 
-        const imgElement = document.createElement('img');
-        imgElement.src = pokemon.imageURL;
+        const pokemonName = document.createElement('h1');
+        pokemonName.innerText = pokemon.name;
 
-        const contentElementH = document.createElement('p');
-        contentElementH.innerText = ('Height: ') + pokemon.height + ('cm');
+        const pokemonImg = document.createElement('img');
+        pokemonImg.src = pokemon.imageURL;
 
-        const contentElementW = document.createElement('p');
-        contentElementW.innerText = ('Weight: ') + pokemon.weight + ('00g');
+        const pokemonTypes = document.createElement('p');
+        pokemonTypes.innerHTML = mapType;
 
-        modal.appendChild(closeButtonElement);
-        modal.appendChild(titleElement);
-        modal.appendChild(imgElement);
+        const pokemonHeight = document.createElement('p');
+        pokemonHeight.innerHTML = ('Height: ') + pokemon.height + ('cm');
 
-        pokemon.types.forEach(pokemon => {
-            //add paragraphs to display types of pokemon
-            const contentElementsT = document.createElement('p');
-            contentElementsT.innerText = pokemon.type.name;
-            contentElementsT.classList.add('type');
-            modal.appendChild(contentElementsT);
-        })
+        const pokemonWeight = document.createElement('p');
+        pokemonWeight.innerHTML = ('Weight: ') + pokemon.weight + ('00g');
 
-        modal.appendChild(contentElementH);
-        modal.appendChild(contentElementW);
+        const pokemonAbilities = document.createElement('p');
+        pokemonAbilities.innerHTML = ('Abilities: ') + mapAblities;
 
-        //add abilites with comma
-        const contentElementsA = document.createElement('p');
-        contentElementsA.innerText = ('Abilities: ') +
-        pokemon.abilities.map((ability) => ability.ability.name).join(', ')
-
+        modalTitle.append(pokemonName);
+        modalBody.append(pokemonImg);
+        modalBody.append(pokemonTypes);
+        modalBody.append(pokemonHeight);
+        modalBody.append(pokemonWeight);
+        modalBody.append(pokemonAbilities);
     }
 
 
