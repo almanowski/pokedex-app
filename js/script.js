@@ -3,7 +3,6 @@ const pokemonRepository = (function () {
     const pokemonList = [];
     //Call pokemon API - Exercise 1.7
     const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-    const modalContainer = document.querySelector('#modal-container');
 
     //Access pokemonList
     function getAll() {
@@ -74,16 +73,6 @@ const pokemonRepository = (function () {
     function showModal(pokemon) {
         modalContainer.innerHTML = '';
 
-        //Adding modal div
-        const modal = document.createElement('div');
-        modal.classList.add('modal');
-
-        //Add close button in modal
-        const closeButtonElement = document.createElement('button');
-        closeButtonElement.classList.add('modal-close');
-        closeButtonElement.innerText = 'X';
-        closeButtonElement.addEventListener('click', hideModal);
-
         const titleElement = document.createElement('h1');
         titleElement.innerText = pokemon.name;
 
@@ -116,30 +105,8 @@ const pokemonRepository = (function () {
         contentElementsA.innerText = ('Abilities: ') +
         pokemon.abilities.map((ability) => ability.ability.name).join(', ')
 
-        modal.appendChild(contentElementsA);
-
-        modalContainer.appendChild(modal);
-
-        modalContainer.classList.add('is-visible');
     }
-
-    function hideModal() {
-        modalContainer.classList.remove('is-visible');
-    }
-
-    window.addEventListener('keydown', (e) => {
-        if(e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-            hideModal();
-        }
-    });
-
-    modalContainer.addEventListener('click', (e) => {
-        //Only close after clicking directly on the overlay
-        const target = e.target;
-        if (target === modalContainer) {
-            hideModal();
-        }
-    });
+    
 
     //Access the above functions outside of pokemonRepository
     return {
