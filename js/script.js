@@ -104,7 +104,7 @@ const pokemonRepository = (function () {
             //add paragraphs to display types of pokemon
             const pokemonType = document.createElement('p');
             pokemonType.innerText = pokemon.type.name;
-            pokemonType.classList.add('type');
+            pokemonType.classList.add('type', pokemon.type.name);
             modalBody.append(pokemonType);
         });
 
@@ -138,7 +138,7 @@ const pokemonRepository = (function () {
         loadDetails: loadDetails,
         showDetails: showDetails
     };
-}());
+})();
 
 
 
