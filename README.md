@@ -6,8 +6,12 @@ Creating this app was part of my [CF Full-Stack Web Development Programm](https:
 
 Live Demo [here](https://almanowski.github.io/pokedex-app/).
 
+<p>&nbsp;</p>
+
 ## Objective :memo:
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enabled the viewing of data points in detail.
+
+<p>&nbsp;</p>
 
 ## Key Features :key:
 * Load data from an external source ([Pokédex API](https://pokeapi.co/))
@@ -15,6 +19,8 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 * On user action (e.g., by clicking on a list item), view details for that Pokémon (name, image, type, height, weight, and abilities)
 * Search Pokémon by name
 
-## Technologies Used :computer:
+<p>&nbsp;</p>
+
+## Technologies Used :computer: 
 * HTML, CSS, JS
 * Bootstrap 4.3.1
