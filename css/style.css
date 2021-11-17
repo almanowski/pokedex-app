@@ -91,6 +91,30 @@ a:focus {
   text-transform: uppercase;
 }
 
+/* --------------------- scroll button ----------------------------------- */
+
+.top-button {
+  display: none;
+  border-style: none;
+  background-color: var(--hover-color);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.top-button:hover {
+  padding: 15px;
+}
+
+.toTopButton {
+  width: 40px;
+}
+
 /* -------------------- modal ---------------------------- */
 
 .modal-body {
@@ -213,6 +237,16 @@ a:focus {
 @media all and (min-width: 576px) {
   .pokemonlist {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .top-button {
+    bottom: 40px;
+    left: 93%;
+    transform: none;
+  }
+
+  .toTopButton {
+    width: 50px;
   }
 }
 
