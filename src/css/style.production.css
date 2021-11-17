@@ -87,7 +87,8 @@ a:focus {
   min-width: 240px;
 }
 
-.pokemonlist__item:hover {
+.pokemonlist__item:hover,
+.pokemonlist__item:active {
   color: #fff;
   background-color: #eb0000;
 }
