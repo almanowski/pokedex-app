@@ -6,15 +6,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="dist/style.production.min.css" type="text/css">
+    <link rel="stylesheet" href="dist/css/style.production.min.css" type="text/css">
     <title>Pokédex</title>
   </head>
   <body>
     <header>
       <nav role="menu" class="navbar navbar-expand-md navbar-dark">
-        <img src="img/pokeball_icon.svg" class="header__icon" alt="Pokeball icon">
+        <img src="src/img/pokeball_icon.svg" class="header__icon" alt="Pokeball icon">
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label:"Toggle navigation">
-          <img src="img/burger_icon.svg">
+          <img src="src/img/burger_icon.svg">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul role="menubar" class="navbar-nav mr-auto">
@@ -55,18 +55,18 @@
         </div>
       </div>
       </div>
-      <button type="button" class="top-button" aria-label="Back-to-Top"><img src="img/arrow_icon.png" class="toTopButton" alt="Pokemon arrow" aria-hidden:"true"></button>
+      <button type="button" class="top-button" aria-label="Back-to-Top"><img src="src/img/arrow_icon.png" class="toTopButton" alt="Pokemon arrow" aria-hidden:"true"></button>
     </main>
     <footer>
       <div class="footer-link">
         <a href="https://pokeapi.co/" target="_blank" class="footer-link__item">Pokedex API</a>
       </div>
     </footer>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="dist/script.min.js"></script>
+    <script src="dist/js/promise-polyfill.min.js"></script>
+    <script src="dist/js/fetch.umd.min.js"></script>
+    <script src="dist/js/script.min.js"></script>
   </body>
 </html>
