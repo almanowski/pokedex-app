@@ -1,24 +1,10 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
 
-.example {
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
-}
 body {
   font-family: verdana, sans-serif;
   font-size: 16px;
@@ -116,7 +102,50 @@ a:focus {
   text-transform: uppercase;
 }
 
+/* --------------------- top button ----------------------------------- */
+
+.top-button {
+  display: none;
+  border-style: none;
+  background-color: #eb0000;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.top-button:hover {
+  padding: 15px;
+}
+
+.toTopButton {
+  width: 40px;
+}
+
 /* -------------------- modal ---------------------------- */
+
+.modal-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 12px 1fr;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  grid-column-gap: 12px;
+  margin-left: auto;
+}
+
+.pokemonNanme::first-letter {
+  text-transform: uppercase;
+}
 
 .modal-body {
   text-align: center;
@@ -127,10 +156,6 @@ a:focus {
   height: 50%;
   display: block;
   margin: 0 auto;
-}
-
-.modal-title h1::first-letter {
-  text-transform: uppercase;
 }
 
 .type {
@@ -243,6 +268,18 @@ a:focus {
   .pokemonlist {
     -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .top-button {
+    bottom: 40px;
+    left: 93%;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .toTopButton {
+    width: 50px;
   }
 }
 
