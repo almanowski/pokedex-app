@@ -59,6 +59,7 @@ const pokemonRepository = (function () {
             item.weight = details.weight;
             item.abilities = details.abilities;
             item.types = details.types;
+            item.order = details.order;
         }).catch(function (e) {
             console.error(e);
         });
@@ -82,21 +83,26 @@ const pokemonRepository = (function () {
         modalBody.innerHTML = '';
         modalTitle.innerHTML = '';
 
-        const pokemonName = document.createElement('h1');
+        const pokemonOrder = document.createElement('h2');
+        pokemonOrder.innerText = ('#') + pokemon.order;
+
+        const pokemonName = document.createElement('h2');
         pokemonName.innerText = pokemon.name;
+        pokemonName.classList.add('pokemonNanme');
 
         const pokemonImg = document.createElement('img');
         pokemonImg.src = pokemon.imageURL;
 
         const pokemonHeight = document.createElement('p');
-        pokemonHeight.innerText = ('Height: ') + pokemon.height + ('0cm');
+        pokemonHeight.innerText = ('Height: ') + pokemon.height/10 + ('m');
 
         const pokemonWeight = document.createElement('p');
-        pokemonWeight.innerText = ('Weight: ') + pokemon.weight + ('00g');
+        pokemonWeight.innerText = ('Weight: ') + pokemon.weight/10 + ('kg');
 
         const pokemonAbilities = document.createElement('p');
         pokemonAbilities.innerText = ('Abilities: ') + mapAblities;
 
+        modalTitle.append(pokemonOrder);
         modalTitle.append(pokemonName);
         modalBody.append(pokemonImg);
 
@@ -150,7 +156,6 @@ pokemonRepository.loadList().then(function() {
         pokemonRepository.addListPokemon(pokemon);
     });
 });
-
 
 
 
