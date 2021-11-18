@@ -23,9 +23,9 @@ const pokemonRepository = (function () {
         button.classList.add('pokemonlist__item', 'list-group-item','list-group-item-action');
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#exampleModal');
+        //Show Pokemondtails on click
         listPokemon.appendChild(button);
         list.appendChild(listPokemon);
-        //Show Pokemondtails on click
         button.addEventListener('click', function() {
             showDetails(pokemon);
         });
@@ -78,7 +78,8 @@ const pokemonRepository = (function () {
         const modalBody = document.querySelector('.modal-body');
         const modalTitle = document.querySelector('.modal-title');
         //add map/join for display purpose
-        const mapAblities = pokemon.abilities.map((ability) => ability.ability.name).join(', ');
+        const mapAblities = pokemon.abilities.map(function(ability) {
+          return ability.ability.name}).join(', ');
 
         modalBody.innerHTML = '';
         modalTitle.innerHTML = '';
@@ -106,7 +107,7 @@ const pokemonRepository = (function () {
         modalTitle.append(pokemonName);
         modalBody.append(pokemonImg);
 
-        pokemon.types.forEach(pokemon => {
+        pokemon.types.forEach(function(pokemon) {
             //add paragraphs to display types of pokemon
             const pokemonType = document.createElement('p');
             pokemonType.innerText = pokemon.type.name;
