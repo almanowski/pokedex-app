@@ -103,21 +103,21 @@ const pokemonRepository = (function () {
         const pokemonAbilities = document.createElement('p');
         pokemonAbilities.innerText = ('Abilities: ') + mapAblities;
 
-        modalTitle.append(pokemonOrder);
-        modalTitle.append(pokemonName);
-        modalBody.append(pokemonImg);
+        modalTitle.appendChild(pokemonOrder);
+        modalTitle.appendChild(pokemonName);
+        modalBody.appendChild(pokemonImg);
 
         pokemon.types.forEach(function(pokemon) {
             //add paragraphs to display types of pokemon
             const pokemonType = document.createElement('p');
             pokemonType.innerText = pokemon.type.name;
             pokemonType.classList.add('type', pokemon.type.name);
-            modalBody.append(pokemonType);
+            modalBody.appendChild(pokemonType);
         });
 
-        modalBody.append(pokemonHeight);
-        modalBody.append(pokemonWeight);
-        modalBody.append(pokemonAbilities);
+        modalBody.appendChild(pokemonHeight);
+        modalBody.appendChild(pokemonWeight);
+        modalBody.appendChild(pokemonAbilities);
     }
 
     //Add searchbar
