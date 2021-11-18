@@ -43,6 +43,7 @@ a:focus {
   right: 0;
   left: 0;
   margin: 0 0 0 15px;
+  padding: 0;
   -webkit-box-shadow: 0 0 0 2px #fff;
           box-shadow: 0 0 0 2px #fff;
   border-radius: 50px;
