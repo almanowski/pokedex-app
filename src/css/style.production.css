@@ -1,7 +1,7 @@
 /*
-* Prefixed by:
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
 
@@ -68,9 +68,7 @@ a:focus {
 }
 
 .pokemonlist {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 30px;
   justify-items: center;
@@ -88,8 +86,12 @@ a:focus {
   min-width: 240px;
 }
 
-.pokemonlist__item:hover,
-.pokemonlist__item:active {
+.pokemonlist__item:hover {
+  color: #fff;
+  background-color: #eb0000;
+}
+
+.pokemonlist__item:focus {
   color: #fff;
   background-color: #eb0000;
 }
@@ -133,13 +135,10 @@ a:focus {
 /* -------------------- modal ---------------------------- */
 
 .modal-title {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 12px 1fr;
   grid-template-columns: auto 1fr;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   grid-column-gap: 12px;
   margin-left: auto;
@@ -162,6 +161,7 @@ a:focus {
 
 .type {
   color: #fff;
+  background-color: #363b81;
   display: inline-block;
   padding: 5px;
   width: 80px;
@@ -268,7 +268,6 @@ a:focus {
 /* SM - Extra small devices */
 @media all and (min-width: 576px) {
   .pokemonlist {
-    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -310,7 +309,6 @@ a:focus {
 /* LG - Large devices */
 @media all and (min-width: 992px) {
   .pokemonlist {
-    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -318,11 +316,9 @@ a:focus {
 /* XL - Extra large devices */
 @media all and (min-width: 1200px) {
   .pokemonlist {
-    -ms-grid-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }

@@ -80,7 +80,7 @@ a:focus {
 }
 
 .pokemonlist__item:hover,
-.pokemonlist__item:active {
+.pokemonlist__item:focus {
   color: var(--bg-color);
   background-color: var(--hover-color);
 }
@@ -145,6 +145,7 @@ a:focus {
 
 .type {
   color: var(--bg-color);
+  background-color: var(--prim-color);
   display: inline-block;
   padding: 5px;
   width: 80px;
