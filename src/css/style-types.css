@@ -1,0 +1,166 @@
+
+.grass:hover,
+.grass:focus {
+  background-color: #14591d;
+}
+
+.fire:hover,
+.fire:focus {
+  background-color: #ff7e23;
+}
+
+.water:hover,
+.water:focus {
+  background-color: #0197f6;
+}
+
+.electric:hover,
+.electric:focus {
+  background-color: #ffdd1f;
+}
+
+.ice:hover,
+.ice:focus {
+  background-color: #abe4e7;
+}
+
+.fighting:hover,
+.fighting:focus {
+  background-color: #eb0000;
+}
+
+.poison:hover,
+.poison:focus {
+  background-color: #9e0099;
+}
+
+.ground:hover,
+.ground:focus {
+  background-color: #ddb138;
+}
+
+.flying:hover,
+.flying:focus {
+  background-color: #20698d;
+}
+
+.psychic:hover,
+.psychic:focus {
+  background-color: #c70069;
+}
+
+.bug:hover,
+.bug:focus {
+  background-color: #aabb13;
+}
+
+.rock:hover,
+.rock:focus {
+  background-color: #612e04;
+}
+
+.ghost:hover,
+.ghost:hover {
+  background-color: #532d8f;
+}
+
+.dark:hover,
+.dark:focus {
+  background-color: #2F4858;
+}
+
+.dragon:hover,
+.dragon:focus {
+  background-color: #692bfa;
+}
+
+.steel:hover,
+.steel:focus {
+  background-color: #9caea9;
+}
+
+.fairy:hover,
+.fairy:focus {
+  background-color: #fecee9;
+}
+
+.normal:hover,
+.normal:focus {
+  background-color: #a69cac;
+}
+
+/* --------------------- Module ----------------------------- */
+
+.grass-pokemon {
+  background-color: #14591d;
+}
+
+.fire-pokemon {
+  background-color: #ff7e23;
+}
+
+.water-pokemon {
+  background-color: #0197f6;
+}
+
+.electric-pokemon {
+  background-color: #ffdd1f;
+  color: #363b81;
+}
+
+.ice-pokemon {
+  background-color: #abe4e7;
+  color: #363b81;
+}
+
+.fighting-pokemon {
+  background-color: #eb0000;
+}
+
+.poison-pokemon {
+  background-color: #9e0099;
+}
+
+.ground-pokemon {
+  background-color: #986a2f;
+}
+
+.flying-pokemon {
+  background-color: #20698d;
+}
+
+.psychic-pokemon {
+  background-color: #c70069;
+}
+
+.bug-pokemon {
+  background-color: #aabb13;
+}
+
+.rock-pokemon {
+  background-color: #612e04;
+}
+
+.ghost-pokemon {
+  background-color: #532d8f;
+}
+
+.dark-pokemon {
+  background-color: #2F4858;
+}
+
+.dragon-pokemon {
+  background-color: #692bfa;
+}
+
+.steel-pokemon {
+  background-color: #9caea9;
+}
+
+.fairy-pokemon {
+  background-color: #fecee9;
+}
+
+.normal-pokemon {
+  background-color: #a69cac;
+}
