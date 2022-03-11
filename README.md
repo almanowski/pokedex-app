@@ -5,7 +5,7 @@
 <p>&nbsp;</p>
 
 <p align="center">
-<img src="./src/img/pokedex.png" alt="App demo image"/>
+  <img src="./src/img/pokedex.png" alt="App demo image"/>
 </p>
 
 <p>&nbsp;</p>
