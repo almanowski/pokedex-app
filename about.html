@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon-16x16.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.production.min.css" type="text/css">
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <header>
+      <nav role="menu" class="navbar navbar-expand-md navbar-dark">
+        <img src="src/img/pokeball_icon.svg" class="header__icon" alt="Pokeball icon">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label:"Toggle navigation">
+          <img src="src/img/burger_icon.svg">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul role="menubar" class="navbar-nav mr-auto">
+            <li role="presentation" class="nav-item active">
+              <a href="index.html" role="menuitem" class="nav-link">Home</a>
+            </li>
+            <li role="presentation" class="nav-item active">
+              <a href="about.html" role="menuitem" class="nav-link" id="activeLink">About<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <label for="searchbar"></label>
+            <input class="form-control mr-sm-2" type="search" id="searchbar" placeholder="Search Pokemon" ariab-label="Search">
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h1>About</h1>
+            <p>
+                Following the principal learning by doing, this Pokédex App was built to get a better understanding of javascript.
+                Creating this app was part of my <a href="https://careerfoundry.com/en/courses/become-a-web-developer" class="about__link" target="_blank">Full-Stack Web Development Programm</a>.
+            </p> 
+            <p>   
+                External Source: <a href="https://pokeapi.co/" class="about__link" target="_blank">Pokédex API</a> 
+                <br>
+                Code: <a href="https://github.com/almanowski/pokedex-app" class="about__link" target="_blank">Github Repository</a>  
+            </p>
+            <img src="src/img/pikachu_svg.svg" class="about__img" alt="Pikachu">
+         </section>       
+    </main>
+    <footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
