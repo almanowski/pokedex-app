@@ -1,42 +1,36 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 body {
   font-family: verdana, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   color: #363b81;
 }
 
-ul {
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+h2 {
+  font-weight: 600;
 }
 
 a:hover {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 a:focus {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: underline !important;
+}
+
+footer {
+  background-color: #eb0000;
 }
 
 /* -------------------------header------------------------------ */
 .navbar {
   background-color: #eb0000;
-  margin: 0;
-  font-size: 1.2em;
 }
 
 .header__icon {
-  width: clamp(50px, calc(3.125rem + ((1vw - 7.68px) * 2.6042)), 80px);
-  height: clamp(50px, calc(3.125rem + ((1vw - 7.68px) * 2.6042)), 80px);
+  width: 50px;
+  height: 50px;
   position: absolute;
   display: block;
   top: 6px;
@@ -44,21 +38,16 @@ a:focus {
   left: 0;
   margin: 0 0 0 15px;
   padding: 0;
-  -webkit-box-shadow: 0 0 0 2px #fff;
-          box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px #fff;
   border-radius: 50px;
   background-color: #fff;
 }
 
-.nav-link:hover,
-.navlink:focus {
-  text-decoration: underline;
-}
 
 #activeLink:hover,
 #activeLink:focus {
   cursor: default;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* ------------------- pokemonlist---------------------------- */
@@ -69,40 +58,51 @@ a:focus {
 
 .pokemonlist {
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 30px;
   justify-items: center;
 }
 
+/* .list-group-item {
+  padding: 0;
+} */
+
 .pokemonlist__item {
-  padding: 20px 0;
-  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: -15px;
+  justify-items: center;
+  align-items: center;
   background-color: #f5f5f5;
   color: #363b81;
   font-size: 1.4em;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 9px 0 rgba(54, 59, 129, 0.63);
-          box-shadow: 5px 5px 9px 0 rgba(54, 59, 129, 0.63);
+  box-shadow: 5px 5px 9px 0 rgba(54, 59, 129, 0.63);
   min-width: 240px;
+  height: 160px;
+  padding: 15px;
+}
+
+.pokemonlist_img {
+  width: 100px;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: #f5f5f5;
 }
 
 .pokemonlist__item:hover {
   color: #fff;
-  background-color: #eb0000;
+  transform: scale(1.12);
+  box-shadow: 7px 7px 11px 0 rgba(54, 59, 129, 0.63);
 }
-
-.pokemonlist__item:focus {
-  color: #fff;
-  background-color: #eb0000;
+.pokemonlist__item:focus{
+    color: #fff;
 }
 
 .pokemonlist__item:active {
-  -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-          transform: translateY(4px);
+  transform: translateY(4px);
 }
 
-.pokemonlist__item::first-letter {
+.uppercase::first-letter {
   text-transform: uppercase;
 }
 
@@ -115,9 +115,7 @@ a:focus {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 99;
   cursor: pointer;
   border-radius: 50px;
@@ -134,10 +132,11 @@ a:focus {
 
 /* -------------------- modal ---------------------------- */
 
+
+
 .modal-title {
   display: grid;
   grid-template-columns: auto 1fr;
-  -webkit-box-align: center;
   align-items: center;
   text-align: center;
   grid-column-gap: 12px;
@@ -149,6 +148,7 @@ a:focus {
 }
 
 .modal-body {
+  font-size: 18px;
   text-align: center;
 }
 
@@ -165,102 +165,37 @@ a:focus {
   display: inline-block;
   padding: 5px;
   width: 80px;
-  margin-left: 10px;
-  border-radius: 2.5px;
+  margin: 15px 0 15px 10px;
+  border-radius: 35px;
 }
 
-.grass {
-  background-color: #008a09;
+/* ------------------- about page --------------------------- */
+
+.about {
+  margin: 15px 20px;
 }
 
-.fire {
-  background-color: #eb0000;
-}
-
-.water {
-  background-color: #092486;
-}
-
-.electric {
-  background-color: #ffdd1f;
-  color: #363b81;
-}
-
-.ice {
-  background-color: #abe4e7;
-  color: #363b81;
-}
-
-.fighting {
-  background-color: #c64300;
-}
-
-.poison {
-  background-color: #9e0099;
-}
-
-.ground {
-  background-color: #986a2f;
-}
-
-.flying {
-  background-color: #2f6b89;
-}
-
-.psychic {
-  background-color: #c70069;
-}
-
-.bug {
-  background-color: #003c00;
-}
-
-.rock {
-  background-color: #612e04;
-}
-
-.ghost {
-  background-color: #0c0453;
-}
-
-.dark {
-  background-color: #000;
-}
-
-.dragon {
-  background-color: #028092;
-}
-
-.steel {
-  background-color: #707070;
-}
-
-.fairy {
-  background-color: #bd0068;
-}
-
-.normal {
-  background-color: #755869;
-}
-
-/* ------------------- footer --------------------------- */
-
-.footer-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #eb0000;
-  padding: 20px 0;
-  margin-top: 50px;
-}
-
-.footer-link__item {
-  display: block;
-  color: #fff;
+.about h1{
   text-align: center;
+  margin-bottom: 25px;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+.about__link {
+  color: #eb0000;
+}
+
+.about__link:hover {
+  color: #eb0000;
+}
+
+.about__img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
 }
 
 /* ------------------------------ Media ------------------------------------ */
@@ -274,9 +209,7 @@ a:focus {
   .top-button {
     bottom: 40px;
     left: 93%;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
+    transform: none;
   }
 
   .toTopButton {
@@ -287,13 +220,14 @@ a:focus {
 /* MD - Medium devices */
 @media all and (min-width: 768px) {
   .navbar {
-    margin: 50px 0;
+    padding: 14px 35px;
   }
 
   .header__icon {
+    width: 70px;
+    height: 70px;
     top: auto;
-    -webkit-box-shadow: 0 0 0 4px #fff;
-            box-shadow: 0 0 0 4px #fff;
+    box-shadow: 0 0 0 4px #fff;
     margin: auto;
   }
 
@@ -315,10 +249,51 @@ a:focus {
 
 /* XL - Extra large devices */
 @media all and (min-width: 1200px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .about {
+    margin: 100px 300px 60px 300px;
+    display: grid;
+    justify-items: center;
+  }
+
+  .about h1 {
+    margin-bottom: 40px;
+  }
+
+  .about p {
+    margin-bottom: 20px;
+  }
+
+  .about__img {
+  margin-top: 40px;
+  }
+
   .pokemonlist {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-    -webkit-box-pack: center;
+    grid-gap: 30px;
     justify-content: center;
+    margin: 0 50px;
+  }
+
+  .modal-dialog {
+    max-width: 60%;
+  }
+
+  .modal-body {
+    text-align: none;
+  }
+
+  .modal-body img {
+    margin: 0 50px 0 30px;
+    float: left;
+  }
+
+  .type {
+    padding: 8px;
+    margin: 120px 10px 20px 0;
+    text-align: center;
   }
 }
