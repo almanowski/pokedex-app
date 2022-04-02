@@ -1,13 +1,6 @@
 # Pokédex App - (JavaScript App)
 ![Badge](https://img.shields.io/badge/demo-online-green)
 
-
-<p>&nbsp;</p>
-
-<p align="center">
-  <img src="./src/img/pokedex.png" alt="App demo image"/>
-</p>
-
 <p>&nbsp;</p>
 
 Following the principal learning by doing, this Pokedex App was built to get a better understanding of javascript.
